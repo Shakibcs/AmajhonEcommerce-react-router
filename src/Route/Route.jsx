@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../Pages/Home/home";
 import Products from "../Pages/Products/Products";
 import Dashboard from "../Dashboard/Dashboard";
+import Footer from "../Pages/Footer/Footer";
 
 const myCreateRoute = createBrowserRouter(
     [
@@ -20,6 +21,10 @@ const myCreateRoute = createBrowserRouter(
         {
             path: '/dashboard',
             element: <Dashboard></Dashboard>
+          },
+          {
+            path: '/footer',
+            element: <Footer></Footer>
           }
       ]
       }
