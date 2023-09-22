@@ -1,29 +1,36 @@
 
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
+import {RouterProvider} from 'react-router-dom'
 import React from 'react'
+import myCreateRoute from './Route/Route'
 
-const myCreateRoute = createBrowserRouter(
-  [
-    {path: '/',
-     element: <section className="text-red-800">
-      <div>This is root path</div>
-     <Outlet></Outlet>
-     </section>,
-     children: [
-      {
-        path: '/home',
-        element: <div>This is home</div>
-      },
-      {
-        path: '/products',
-        element: <div>Products page</div>
-      }
-    ]
-    }
+// const myCreateRoute = createBrowserRouter(
+//   [
+//     {path: '/',
+//      element:<section>
+                  //   <nav className='py-5 shadow-lg text-red-800'>
+                  //    NAB BAR 
+                  //   </nav>
+                  //   <Outlet></Outlet>
+                  // </section>
+//      children: [
+//       {
+//         path: '/home',
+//         element: <Home></Home>
+//       },
+//       {
+//         path: '/products',
+//         element: <Products></Products>
+//       }
+//     ]
+//     }
   
-  ])
+//   ])
+
+
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
