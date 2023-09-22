@@ -13,6 +13,8 @@ const MainLayout = () => {
         </ul>
       </nav>
       </section>
+
+     
      <Outlet></Outlet>
      
         </div>
