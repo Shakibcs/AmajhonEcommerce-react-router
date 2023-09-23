@@ -1,10 +1,11 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter} from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../Pages/Home/home";
 import Products from "../Pages/Products/Products";
 import Dashboard from "../Dashboard/Dashboard";
 import Footer from "../Pages/Footer/Footer";
 import Product from "../Pages/Products/Product/Product";
+
 
 const myCreateRoute = createBrowserRouter(
     [
@@ -21,9 +22,11 @@ const myCreateRoute = createBrowserRouter(
           loader: () => fetch('https://dummyjson.com/products'),
         },
         {
-          path: '/products/:id',
-          element: <Product></Product>
+          path: '/products/:id',   //dynamic products ..
+          element: <Product></Product>,
+         // loader: (object) => fetch(`https://dummyjson.com/products/${object.params.id}`)
         },
+       
         {
             path: '/dashboard',
             element: <Dashboard></Dashboard>
