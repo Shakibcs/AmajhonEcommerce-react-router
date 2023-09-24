@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import Footer from "../Pages/Footer/Footer";
 
 const MainLayout = () => {
@@ -8,9 +8,32 @@ const MainLayout = () => {
                 <div><h1 className="text-xl font-bold">AmaJhon</h1></div>
       <nav>
         <ul className="flex gap-5">
-            <li><a href="/home">Home</a></li>
-            <li><a href="/products">Products</a></li>
-            <li><a href="/dashboard">Dashboard</a></li>
+           
+<NavLink
+  to="/home"
+  className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "bg-green-400" : ""
+  }
+>
+  Home
+</NavLink>
+<NavLink
+  to="/products"
+  className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "bg-green-400" : ""
+  }
+>
+  Products
+</NavLink>
+<NavLink
+  to="/dashboard"
+  className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "bg-green-400" : ""
+  }
+>
+  Dashboard
+</NavLink>
+           
         </ul>
       </nav>
       </section>
